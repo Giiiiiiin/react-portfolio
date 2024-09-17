@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import MyComponent from './main';
 
 function App() {
   return (
@@ -18,8 +19,10 @@ function App() {
           Learn React
         </a>
       </header>
+      <MyComponent name="Yubel" project="Fusion"></MyComponent>
     </div>
   );
+
 }
 
 export default App;
