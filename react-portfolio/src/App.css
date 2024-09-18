@@ -51,10 +51,10 @@
 
 .App-section {
   padding: 20vh;
-  background-image: linear-gradient(to bottom, transparent 60%, #282c34 100%),linear-gradient(to top, transparent 60%, #282c34 100%);
+  background-image: linear-gradient(to bottom, transparent 60%, #000000 100%),linear-gradient(to top, transparent 60%, #282c34 100%);
   background-color: #ffffff;
   min-height: 50vh;
-  display: flex;
+  display: flex;  
   flex-direction: column;
   align-items: center;
   justify-content: center;
