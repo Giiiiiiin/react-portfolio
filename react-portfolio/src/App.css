@@ -14,8 +14,46 @@
 }
 
 .App-header {
+  background-image: url("banner-bg-1.jpg");
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 91vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  background-Repeat: no-repeat;
+  background-size: cover;
+}
+
+.App-header:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent 60%, #282c34 100%);
+}
+
+.content-about {
+  padding: 25vh;
+  background-color: #282c34;
+  min-height: 20vh;
+  display: static;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-section {
+  padding: 20vh;
+  background-image: linear-gradient(to bottom, transparent 60%, #282c34 100%),linear-gradient(to top, transparent 60%, #282c34 100%);
+  background-color: #ffffff;
+  min-height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,3 +74,29 @@
     transform: rotate(360deg);
   }
 }
+
+.modal-sheet .modal-dialog {
+  width: 380px;
+  transition: bottom .75s ease-in-out;
+  text-align: justify;
+}
+.modal-sheet .modal-footer {
+  padding-bottom: 2rem;
+}
+
+img{
+  object-fit: contain;
+}
+
+p.card-text{
+  text-align: justify;
+}
+
+
+.proj:hover{
+
+background-color: #c7abff;
+transform: 1.01;
+
+}
+
