@@ -157,12 +157,12 @@ function About() {
     const [modalContactShow, setModalContactShow] = useState(false);
 
     return (
-        <div className="content-about" id="about">
+        <div className="content-about">
             <h1 style={{margin: '5rem'}}>About Me</h1>
             <div
                 class="row justify-content-center align-items-center g-2"
             >
-                <div class="col">
+                <div class="col"  id="about">
                     <div
                         class="row justify-content-center align-items-center g-2"
                     >
@@ -272,7 +272,7 @@ const MyComponent = (props) => {
             <Transition
                 colorTop="#544000"
                 colorBot="#541800"
-                message=" "
+                message="Blur the line between fiction and reality."
             />
             <Section
                 colorTop="#541800"
@@ -289,7 +289,7 @@ const MyComponent = (props) => {
             <Transition
                 colorTop="#000000"
                 colorBot="#151033"
-                message=" "
+                message="For the stories are just another 'Reality.'"
             />
             <Section
                 colorTop="#151033"
