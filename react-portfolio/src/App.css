@@ -13,10 +13,21 @@
   }
 }
 
+.navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: max-content;
+  z-index: 100;
+}
+
 .App-header {
   background-image: url("banner-bg-1.jpg");
   background-color: #282c34;
-  min-height: 91vh;
+  height: 91vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
