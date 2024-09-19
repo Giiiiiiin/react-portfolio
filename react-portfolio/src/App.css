@@ -60,6 +60,18 @@
   color: white;
 }
 
+.content-transition {
+  padding: 25vh;
+  background-color: #282c34;
+  min-height: 20vh;
+  display: static;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
 .App-section {
   padding: 50vh;
   background-image: linear-gradient(to bottom, transparent 60%, #282c34 100%),linear-gradient(to top, transparent 60%, #282c34 100%);

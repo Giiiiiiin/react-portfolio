@@ -4,7 +4,6 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Modal from 'react-bootstrap/Modal';
 import { useState } from 'react';
-import CardGroup from 'react-bootstrap/CardGroup';
 import Profile from './profile.png';
 import Card1 from './project1.jpg';
 import Card2 from './project2.jpg';
@@ -13,6 +12,10 @@ import Sparkle from './sparkle.jpg';
 import Firefly from './firefly.jpg';
 import Verina from './verina.jpg';
 import Yinlin from './yinlin.png';
+import BG1 from './bg1.jpg';
+import BG2 from './bg2.jpg';
+import BG3 from './bg3.jpg';
+
 //
 
 function NavBar() {
@@ -140,6 +143,15 @@ function SingleCards(props) {
                 Launch vertically centered modal
             </Button>
             */
+function Transition(props) {
+    return (
+        <div className='content-about' style={{
+            backgroundImage: `linear-gradient( ${props.colorTop}, ${props.colorBot})`
+        }}>
+            <h1>{props.message}</h1>
+        </div>
+    )
+}
 
 function About() {
     const [modalContactShow, setModalContactShow] = useState(false);
@@ -185,6 +197,8 @@ function About() {
                     >
                         <div class="col"><h6 class="fw-light">Unhinged Writer</h6></div>
                         <div class="col"><h6 class="fw-light">Downbad Gacha Player</h6></div>
+                        <div class="col"><h6 class="fw-light">Sleepless Progammer</h6></div>
+                        <div class="col"><h6 class="fw-light">Apostle of Hypnos</h6></div>
                     </div>
                     
 
@@ -203,9 +217,13 @@ function About() {
 }
 
 function Section(props) {
-
+//#282c34
     return (
-        <div className="App-section" id="portfolio">
+        <div className="App-section" id="portfolio" style={{
+            backgroundImage: `linear-gradient( to bottom, transparent 60%, ${props.colorBot} 100%), linear-gradient(to top, transparent 60%, ${props.colorTop} 100%), url("${props.background}")`,
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+        }}>
             <div
                 class="row justify-content-center align-items-center g-lg-2"
                 align="center"
@@ -240,6 +258,9 @@ const MyComponent = (props) => {
             <Banner></Banner>
             <About></About>
             <Section
+                colorTop="#282c34"
+                colorBot="#544000"
+                background={BG1}
                 img={Card1}
                 title=  "City of Fanatical Hope" 
                 desc=   "A story born to challenge the idea of negative concepts and positive concepts. 
@@ -248,7 +269,15 @@ const MyComponent = (props) => {
                 button="Details"
                 onShow={() => setModal1Show(true)}
             />
+            <Transition
+                colorTop="#544000"
+                colorBot="#541800"
+                message=" "
+            />
             <Section
+                colorTop="#541800"
+                colorBot="#000000"
+                background={BG2}
                 img={Card2}
                 title=  "Clockwork and Its Broken Time" 
                 desc=   "What does it mean for time to go forward? In the first place, 
@@ -257,7 +286,15 @@ const MyComponent = (props) => {
                 button="Details"
                 onShow={() => setModal2Show(true)}
             />
+            <Transition
+                colorTop="#000000"
+                colorBot="#151033"
+                message=" "
+            />
             <Section
+                colorTop="#151033"
+                colorBot="#000000"
+                background={BG3}
                 img={Card3}
                 title=  "The Eternity That Never Lasted" 
                 desc=   "An eternity. The concept of time may as well cease to exist. 
